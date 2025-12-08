@@ -190,3 +190,5 @@ output AZURE_STORAGE_ACCOUNT_NAME string = aiProject.outputs.dependentResources.
 output COBO_ACA_IDENTITY_PRINCIPAL_ID string = enableContainerAgents ? coboAgent!.outputs.COBO_ACA_IDENTITY_PRINCIPAL_ID : ''
 output SERVICE_API_RESOURCE_ID string = enableContainerAgents ? coboAgent!.outputs.SERVICE_API_RESOURCE_ID : ''
 
+// Mock output of AGENT_NAME which should be populated by azd extension by reading from agent.yaml
+output AGENT_NAME string = 'Cobo Calculator Agent'
