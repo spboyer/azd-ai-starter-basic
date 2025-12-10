@@ -144,6 +144,7 @@ module coboAgent 'core/ai/cobo-agent.bicep' = if (enableContainerAgents) {
     openaiApiVersion: '2025-03-01-preview'
     aiServicesAccountName: aiProject.outputs.aiServicesAccountName
     aiProjectName: aiFoundryProjectName
+    authAppId: aiProject.outputs.projectPrincipalId
   }
 }
 

@@ -12,6 +12,9 @@ param aiServicesAccountName string
 @description('AI Foundry Project name within the account')
 param aiProjectName string
 
+@description('Principal ID for authentication')
+param authAppId string
+
 var resourceToken = uniqueString(subscription().id, resourceGroup().id, location)
 var prefix = 'ca-${aiProjectName}-${resourceToken}'
 var containerAppsEnvironmentName = '${prefix}-env'
@@ -59,8 +62,8 @@ module app '../host/container-app.bicep' = {
     containerRegistryName: containerRegistryName
     targetPort: 8088
     imageName: ''  // Empty during provision, azd deploy will update with actual image
-    authEnabled: false  // Authentication will be configured by postdeploy script
-    authAppId: ''
+    authEnabled: true
+    authAppId: authAppId
     authIssuerUrl: ''
     authAllowedAudiences: []
     authRequireClientApp: false
