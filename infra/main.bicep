@@ -155,7 +155,6 @@ output AZURE_AI_PROJECT_ID string = aiProject.outputs.projectId
 output AZURE_AI_FOUNDRY_PROJECT_ID string = aiProject.outputs.projectId
 output AZURE_AI_ACCOUNT_NAME string = aiProject.outputs.aiServicesAccountName
 output AZURE_AI_PROJECT_NAME string = aiProject.outputs.projectName
-output AZURE_AI_PROJECT_TENANT_ID string = aiProject.outputs.projectTenantId
 output AZURE_AI_PROJECT_PRINCIPAL_ID string = aiProject.outputs.projectPrincipalId
 
 // Endpoints

@@ -286,7 +286,6 @@ output aiServicesProjectName string = aiAccount::project.name
 output aiServicesPrincipalId string = aiAccount.identity.principalId
 output projectName string = aiAccount::project.name
 output projectPrincipalId string = aiAccount::project.identity.principalId
-output projectTenantId string = aiAccount::project.identity.tenantId
 output APPLICATIONINSIGHTS_CONNECTION_STRING string = applicationInsights.outputs.connectionString
 
 // Grouped dependent resources outputs
