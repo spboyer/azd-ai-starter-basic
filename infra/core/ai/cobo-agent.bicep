@@ -2,7 +2,7 @@ param location string = resourceGroup().location
 param tags object = {}
 
 param containerRegistryName string
-param serviceName string = 'cobo-agent'
+param serviceName string = 'CalculatorAgentLG'
 param openaiEndpoint string
 param openaiApiVersion string
 
